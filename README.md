@@ -27,20 +27,35 @@ The hardest part was getting im2col and its backward pass (col2im) right. Once t
 ## Architecture
 ---
 Input Image (H × W × C)
+
 │
+
 ▼
+
 Conv2D → ReLU → MaxPool2D   ← Conv Block 1
+
 │
+
 ▼
+
 Conv2D → ReLU → MaxPool2D   ← Conv Block 2
+
 │
+
 ▼
+
 Flatten
+
 │
+
 ▼
+
 Linear → ReLU               ← Classifier
+
 │
+
 ▼
+
 Linear → Softmax → Loss
 ## How to run
 
@@ -70,7 +85,9 @@ Frameworks hide a lot. Writing the conv backward pass by hand, deriving the grad
 ## Project structure
 ---
 ├── model.py       # All 59 functions implemented from scratch
+
 ├── scaffold.py    # Dataset generation, training loop, evaluation
+
 └── README.md
 
 *Built on [Deep-ML](https://www.deep-ml.com)*
