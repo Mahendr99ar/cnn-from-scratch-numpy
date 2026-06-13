@@ -1,4 +1,4 @@
-# Trainable CNN from Scratch in NumPy
+# Trainable CNN from Scratch in NumPy 🔬
 
 I built this because I was tired of using CNNs as a black box. Every tutorial just says "call Conv2D" — nobody shows what's actually happening inside. So I implemented the whole thing in pure NumPy, no PyTorch, no autograd, nothing.
 
@@ -25,38 +25,28 @@ The hardest part was getting im2col and its backward pass (col2im) right. Once t
 ---
 
 ## Architecture
----
+
+```
 Input Image (H × W × C)
-
-│
-
-▼
-
+     │
+     ▼
 Conv2D → ReLU → MaxPool2D   ← Conv Block 1
-
-│
-
-▼
-
+     │
+     ▼
 Conv2D → ReLU → MaxPool2D   ← Conv Block 2
-
-│
-
-▼
-
+     │
+     ▼
 Flatten
-
-│
-
-▼
-
+     │
+     ▼
 Linear → ReLU               ← Classifier
-
-│
-
-▼
-
+     │
+     ▼
 Linear → Softmax → Loss
+```
+
+---
+
 ## How to run
 
 ```bash
@@ -83,11 +73,13 @@ Frameworks hide a lot. Writing the conv backward pass by hand, deriving the grad
 ---
 
 ## Project structure
----
+
+```
 ├── model.py       # All 59 functions implemented from scratch
-
 ├── scaffold.py    # Dataset generation, training loop, evaluation
-
 └── README.md
+```
+
+---
 
 *Built on [Deep-ML](https://www.deep-ml.com)*
