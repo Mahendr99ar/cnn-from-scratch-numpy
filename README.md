@@ -1,4 +1,4 @@
-# Trainable CNN from Scratch in NumPy 🔬
+# Trainable CNN from Scratch in NumPy 
 
 I built this because I was tired of using CNNs as a black box. Every tutorial just says "call Conv2D" — nobody shows what's actually happening inside. So I implemented the whole thing in pure NumPy, no PyTorch, no autograd, nothing.
 
